@@ -1,4 +1,4 @@
-<img src="phase_3/etc/icon.ico" align="right" width="200"/>
+<img src="resources/phase_3/etc/icon.ico" align="right" width="200"/>
 
 # Toontown Strut
 A build of Toontown Stride, that just works.
