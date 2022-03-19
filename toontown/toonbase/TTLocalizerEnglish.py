@@ -1,3 +1,6 @@
+# Dev Notes:
+# Potentially breaking changes:
+# GolfHoleInOne
 from toontown.toonbase.TTLocalizerEnglishProperty import *
 from toontown.catalog import CatalogAccessoryItemGlobals
 from otp.otpbase import OTPLocalizer as OL
@@ -16,7 +19,7 @@ ChalkFont = 'phase_3/models/fonts/Chawp.ttf'
 BuildingNametagFont = 'phase_3/models/fonts/MickeyFont'
 BuildingNametagShadow = None
 NametagFonts = (
-    'phase_3/models/fonts/ImpressBT.ttf',
+    'phase_3/models/fonts/ComicSansBold.ttf',
     'phase_3/models/fonts/AnimGothic.bam',
     'phase_3/models/fonts/Aftershock.bam',
     'phase_3/models/fonts/JiggeryPokery.bam',
@@ -33,7 +36,8 @@ NametagFonts = (
     'phase_3/models/fonts/RedDogSaloon.bam',
     'phase_3/models/fonts/PBN.ttf',
     'phase_3/models/fonts/SomethingStrange.ttf',
-    'phase_3/models/fonts/DinosaursAreAlive.ttf'
+    'phase_3/models/fonts/DinosaursAreAlive.ttf',
+    'phase_3/models/fonts/ImpressBT.ttf'
 )
 NametagFontNames = (
     "Toony Sam's",
@@ -53,21 +57,22 @@ NametagFontNames = (
     'Western',
     'Pixelated',
     'Metal',
-    'Dinosaurs'
+    'Dinosaurs',
+    'The Mainstream'
 )
 NametagLabel = ' Nametag'
 ScreenshotPath = 'user/screenshots/'
 Flippy = 'Poodletooth'
-lTheBrrrgh = "Brrrgh!"
-lDaisyGardens = 'Garden'
-lDonaldsDock = "The Dock"
-lDonaldsDreamland = "Dreamland"
-lMinniesMelodyland = "Melodyland"
+lTheBrrrgh = "The Brrrgh"
+lDaisyGardens = 'Daisy Garden'
+lDonaldsDock = "Donuts Dock\n(Formerly Donalds)"
+lDonaldsDreamland = "Donald Dreamland"
+lMinniesMelodyland = "Minnie's Melodyland"
 lToontownCentral = 'Toontown Central'
 lToonHQ = 'Toon HQ'
 lSellbotHQ = 'Sellbot HQ'
 lGoofySpeedway = 'Goofy Speedway'
-lOutdoorZone = "Acorn Acres"
+lOutdoorZone = "Chip and Dale's Acorn Acres"
 lGolfZone = "MiniGolf"
 lPartyHood = 'Party Grounds'
 GlobalStreetNames = {20000: ('to', 'on', 'Tutorial Terrace'),
@@ -1915,7 +1920,7 @@ AvatarPanelGroupRetract = 'Retract Invitation'
 AvatarPanelGroupMember = 'Already In Group'
 AvatarPanelGroupMemberKick = 'Remove'
 AvatarPanelCast = 'Cast Member'
-AvatarPanelCastInfo = '%s is a Toontown Stride Cast Member.'
+AvatarPanelCastInfo = '%s is a Toontown Strut Cast Member.'
 ReportPanelTitle = 'Report A Toon'
 ReportPanelBody = 'This feature will send a complete report to a Moderator. Instead of sending a report, you might choose to do one of the following:\n\n  - Teleport to another district\n  - Use "Ignore" on the toon\'s panel\n\nDo you really want to report %s to a Moderator?'
 ReportPanelBodyFriends = 'This feature will send a complete report to a Moderator. Instead of sending a report, you might choose to do one of the following:\n\n  - Teleport to another district\n  - Break your friendship\n\nDo you really want to report %s to a Moderator?\n\n(This will also break your friendship)'
@@ -2712,7 +2717,7 @@ SuitAttackTaunts = {'Audit': ["I believe your books don't balance.",
               "You aren't above the law!",
               'There should be a law against you.',
               "There's no ex post facto with me!",
-              "The opinions expressed in this attack are not those of Toontown Stride.",
+              "The opinions expressed in this attack are not those of Toontown Strut.",
               'We cannot be held responsible for damages suffered in this attack.',
               'Your results for this attack may vary.',
               'This attack is void where prohibited.',
@@ -3414,7 +3419,7 @@ MusicEncntrGeneralBg = 'Encounter With Cogs'
 MusicTcSzActivity = 'Toontorial Medley'
 MusicTcSz = 'Strolling Along'
 MusicCreateAToon = 'The New Toon in Town'
-MusicTtsTheme = 'The Toontown Stride Theme'
+MusicTtsTheme = 'The Toontown Strut Theme'
 MusicTtTheme = 'The Toontown Theme'
 MusicMinigameRace = 'Slow and Steady'
 MusicTcNbrhood = 'Toontown Central'
@@ -3440,7 +3445,7 @@ MusicGsRaceRr = 'Route 66'
 MusicGzSz = 'The Putt-Putt Polka'
 MusicMmSz = 'Dancing in the Streets'
 MusicMmSzActivity = 'Here Comes Treble'
-MusicDdNbrhood = "Donalds Dock"
+MusicDdNbrhood = "Donuts Dock"
 MusicGsKartshop = 'Mr. Goofywrench'
 MusicDdSzActivity = 'Sea Shanty'
 MusicEncntrGeneralBgIndoor = 'Building Excitement'
@@ -3448,7 +3453,7 @@ MusicTtElevator = 'Going Up?'
 MusicEncntrToonWinningIndoor = 'Toons Unite!'
 MusicEncntrGeneralSuitWinningIndoor = 'Cog-tastrophe!'
 MusicTbNbrhood = 'The Brrrgh'
-MusicDlNbrhood = "Donalds Dreamland"
+MusicDlNbrhood = "Donuts Dreamland"
 MusicDlSzActivity = 'Counting Sheep'
 MusicDgSz = 'Waltz of the Flowers'
 MusicDlSz = 'Sleepwalking'
@@ -4215,7 +4220,7 @@ TownBattleSOSPetSearchTitle = 'Searching for doodle\n%s...'
 TownBattleSOSPetInfoTitle = '%s is %s'
 TownBattleSOSPetInfoOK = lOK
 TrolleyHFAMessage = 'You may not board the trolley until your Laff meter is smiling.'
-TrolleyTFAMessage = 'You may not board the trolley until Joey says so.'
+TrolleyTFAMessage = 'You may not board the trolley until HE says so.'
 TrolleyHopOff = 'Hop off'
 FishingExit = 'Exit'
 FishingCast = 'Cast'
@@ -6250,7 +6255,7 @@ NPCToonNames = {20000: 'Tutorial Tom',
  7008: 'Ima Cagedtoon',
  7009: 'Jimmy Thelock',
  7010: 'Cranky Supertoon',
- 7011: 'Donald',
+ 7011: 'Donut',
  7012: 'Phil Bettur',
  7013: 'Emma Phatic',
  7014: 'GiggleMesh',
@@ -6954,7 +6959,7 @@ TipDict = {TIP_NONE: ('',),
                'Open or close your Shticker Book by pressing the "F8" key.',
                'You can look up by pressing the "Page Up" key and look down by pressing the "Page Down" key.',
                'Press the "Control" key to jump.',
-               'Press the "F9" key to take a screenshot, which will be saved in your Toontown Stride folder on your computer.',
+               'Press the "F9" key to take a screenshot, which will be saved in your Toontown Strut folder on your computer.',
                'You can change your screen resolution, adjust audio, and control other options on the Options Page in the Shticker Book.',
                "Try on your friend's clothing at the closet in their house.",
                'You can go to your house using the "Go Home" button on your map.',
@@ -6968,7 +6973,7 @@ TipDict = {TIP_NONE: ('',),
                'Change to different views of your Toon by pressing the Tab Key.',
                'Sometimes you can find several different ToonTasks offered for the same reward. Shop around!',
                'Finding friends with similar ToonTasks is a fun way to progress through the game.',
-               'You never need to save your Toontown progress. The Toontown Stride servers continually save all the necessary information.',
+               'You never need to save your Toontown progress. The Toontown Strut servers continually save all the necessary information.',
                'You can whisper to other Toons either by clicking on them or by selecting them from your Friends List.',
                'Some SpeedChat phrases play emotion animations on your Toon.',
                'If the area you are in is crowded, try changing Districts. Go to the District Page in the Shticker Book and select a different one.',
@@ -7636,7 +7641,7 @@ SummonDlgShopkeeper = 'The Shopkeeper '
 PolarPlaceEffect1 = NPCToonNames[3306] + ': Welcome to Polar Place!'
 PolarPlaceEffect2 = NPCToonNames[3306] + ': Try this on for size.'
 PolarPlaceEffect3 = NPCToonNames[3306] + ': Your new look will only work in ' + lTheBrrrgh + '.'
-GreenToonEffectMsg = NPCToonNames[5312] + ': You look Toontastic in green!'
+GreenToonEffectMsg = NPCToonNames[5312] + ': You look very Toontastic in green!'
 LaserGameMine = 'Skull Finder!'
 LaserGameRoll = 'Matching'
 LaserGameAvoid = 'Avoid the Skulls'
@@ -7650,10 +7655,10 @@ PinballScoreHolder = '%s\n'
 GagTreeFeather = 'Feather Gag Tree'
 GagTreeJugglingBalls = 'Juggling Balls Gag Tree'
 StatuaryFountain = 'Fountain'
-StatuaryDonald = 'Donald Statue'
-StatuaryMinnie = 'Minnie Statue'
-StatuaryMickey1 = 'Mickey Statue'
-StatuaryMickey2 = 'Mickey Fountain'
+StatuaryDonald = 'Donut Statue'
+StatuaryMinnie = 'Mommie Statue'
+StatuaryMickey1 = 'Mocky Statue'
+StatuaryMickey2 = 'Mocky Fountain'
 StatuaryToon = 'Toon Statue'
 StatuaryToonWave = 'Toon Wave Statue'
 StatuaryToonVictory = 'Toon Victory Statue'
@@ -7897,7 +7902,7 @@ GolfHoleNames = {0: 'Whole In Won',
  33: 'Swing Time-2',
  34: 'Hole On The Range-2',
  35: 'Second Wind-2'}
-GolfHoleInOne = 'Hole In One'
+GolfHoleInOne = 'Winner Royale!'
 GolfCondor = 'Condor'
 GolfAlbatross = 'Albatross'
 GolfEagle = 'Eagle'
@@ -8501,7 +8506,8 @@ DonaldChatter = ["I'm glad you're here today!",
  'Sometimes I play trolley games just to eat the fruit pie!',
  'I hope you are enjoying your stay in Toontown!',
  'I like what you are wearing.',
- 'I love to play tag. Do you?']
+ 'I love to play tag. Do you?',
+ "Somehow we missed out on that pot of gold, but we'll try best that we can to carry on!"]
 NPCFriendUnavailable = 'Unavailable'
 FireTalkMessage = "You're fired!"
 
@@ -8686,7 +8692,7 @@ StatPageClearDone = 'Your stats have been cleared.'
 
 ChairAskToUse = 'Would you like to sit on this chair?'
 
-FriendSecretIntro = "If you are playing Toontown Stride with someone you know in the real world, you can become True Friends.  You can chat using the keyboard with your True Friends.  Other Toons won't understand what you're saying.\n\nYou do this by getting a True Friend Code.  Tell the True Friend Code to your friend, but not to anyone else.  When your friend types in your True Friend Code on his or her screen, you'll be True Friends in Toontown!"
+FriendSecretIntro = "If you are playing Toontown Strut with someone you know in the real world, you can become True Friends.  You can chat using the keyboard with your True Friends.  Other Toons won't understand what you're saying.\n\nYou do this by getting a True Friend Code.  Tell the True Friend Code to your friend, but not to anyone else.  When your friend types in your True Friend Code on his or her screen, you'll be True Friends in Toontown!"
 FriendSecretGetSecret = 'Get a True Friend Code'
 FriendSecretEnterSecret = 'If you have a True Friend Code from someone you know, type it here.'
 FriendSecretOK = lOK
