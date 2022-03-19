@@ -4,4 +4,4 @@
 A build of Toontown Stride, that just works.
 
 # ❓ What is Toontown Strut
-A variant of Toontown Stride and a Community Focused Toontown Server with hacky patches for the people to live the most ***high quality** Toontown experience (according to the creator, NodeMixaholic.)
+A variant of Toontown Stride and a Community Focused Toontown Server with hacky patches for the people to live the most ***high quality*** Toontown experience (according to the creator, NodeMixaholic.)
