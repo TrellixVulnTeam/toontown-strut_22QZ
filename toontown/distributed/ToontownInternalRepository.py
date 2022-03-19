@@ -82,6 +82,6 @@ class ToontownInternalRepository(AstronInternalRepository):
             self.writeServerEvent('INTERNAL-EXCEPTION', self.getAvatarIdFromSender(), self.getAccountIdFromSender(), repr(e), traceback.format_exc())
             self.notify.warning('INTERNAL-EXCEPTION: %s (%s)' % (repr(e), self.getAvatarIdFromSender()))
             print(traceback.format_exc())
-            sys.exc_clear()
+            # sys.exc_clear()
             
         return 1
