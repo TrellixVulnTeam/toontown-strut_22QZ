@@ -19,9 +19,9 @@ vfs-mount resources/server /server
 model-path /
 
 # Server:
-server-version Live-1.0.1
-min-access-level 700
-# accountdb-type developer
+server-version Final-1.0.1
+min-access-level 0
+accountdb-type developer
 shard-low-pop 50
 shard-mid-pop 100
 
@@ -36,7 +36,7 @@ dc-file dependencies/astron/dclass/toonisland.dc
 want-pets #t
 want-parties #f
 want-cogdominiums #t
-want-lawbot-cogdo #t
+want-lawbot-cogdo #f
 want-anim-props #t
 want-game-tables #f
 want-find-four #f
@@ -57,6 +57,8 @@ want-instant-delivery #t
 cogdo-pop-factor 1.5
 cogdo-ratio 0.5
 default-directnotify-level info
+want-dev #f
+want-pstats 0
 
 # Crates:
 dont-destroy-crate #f

@@ -76,7 +76,7 @@ spellbook = Spellbook()
 
 # CATEGORIES
 class MagicWordCategory:
-    def __init__(self, name, defaultAccess=600):
+    def __init__(self, name, defaultAccess=100):
         self.name = name
         self.defaultAccess = defaultAccess
 
