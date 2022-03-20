@@ -15,7 +15,7 @@ Pre-installed.
 ```
 brew install --no-quarantine gcenx/wine/unofficial-wineskin
 ```
-* Install latest engine
+* Install latest 64bit engine
 * Create a new bottle.
 * Copy strut to the bottle's c drive using "show package contents"
 * Create a shortcut to the Start batch file
