@@ -23,4 +23,8 @@ $ brew install python@3.9
 After installing Python 3.9.  You can then install the wheel by using pip:
 ```shell
 $ pip install panda3d-1.11.0-cp39-cp39-macosx_10_9_x86_64.whl
+$ pip install wxPython
 ```
+
+Then just make:
+https://github.com/loblao/libpandadna
