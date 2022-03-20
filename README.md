@@ -19,3 +19,7 @@ Run in wine cmd once in directory:
 ```
 start Start
 ```
+
+## GNU/Linux
+
+Use the "Bottles" flatpak, similar process to macOS.
