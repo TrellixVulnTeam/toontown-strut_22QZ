@@ -20,7 +20,7 @@ brew install --no-quarantine gcenx/wine/unofficial-wineskin
 * Create a new wrapper.
 * Open the app inside wrapper
 * Click "Install app"
-* Copy strut to the wrapper's c drive
+* Copy strut to the wrapper and choose Start.bat at next step
 * Done!
 
 
