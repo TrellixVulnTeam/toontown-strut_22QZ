@@ -12,20 +12,14 @@ A variant of Toontown Stride and a Community Focused Toontown Server with hacky 
 Pre-installed.
 
 ## macOS 11+
+```
 brew install --no-quarantine gcenx/wine/unofficial-wineskin
-
-Note: if it asks for an installer during bottle creation, just use this (but be sure to uncheck anything related to Python and Sample Programs, and make a shortcut to drive_c/Windows/System32/cmd.exe!):
-https://drive.google.com/file/d/1i-7C_uAfzZSaArzFh80NMD3Dg5FD2Tdt/view?usp=sharing
-
-Then copy strut's folder to ~/Library/PlayOnMac/wineprefix/***BOTTLE-NAME***/drive_c using (example:
-```shell
-cd ~/Library/PlayOnMac/wineprefix/***BOTTLE-NAME***/drive_c && cp ~/your/strut/directory ./strut
 ```
 
-Run in wine cmd, and once in directory:
-```
-start Start
-```
+* Create a new bottle.
+* Copy strut to the bottle's c drive using "show package contents"
+* Create a shortcut to the Start batch file
+
 
 
 
