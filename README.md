@@ -15,7 +15,7 @@ Pre-installed.
 Note: if it asks for an installer during bottle creation, just use this (but be sure to uncheck anything related to Python and Sample Programs, and make a shortcut to drive_c/Windows/System32/cmd.exe!):
 https://drive.google.com/file/d/1i-7C_uAfzZSaArzFh80NMD3Dg5FD2Tdt/view?usp=sharing
 
-Then copy strut's folder to ~/Library/PlayOnMac/wineprefix/ToontownStrut/drive_c
+Then copy strut's folder to ~/Library/PlayOnMac/wineprefix/***BOTTLE-NAME***/drive_c
 https://www.playonmac.com/en/download.html
 
 Run in wine cmd, and once in directory:
