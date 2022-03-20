@@ -20,9 +20,6 @@ brew install --no-quarantine gcenx/wine/unofficial-wineskin
 * Copy strut to the bottle's c drive using "show package contents"
 * Create a shortcut to the Start batch file
 
-
-
-
 ## GNU/Linux
 
-Use the "Bottles" flatpak using a gaming bottle, similar process to macOS.
+Use the "Bottles" flatpak using a gaming bottle, similar process to macOS except from wine cmd.
