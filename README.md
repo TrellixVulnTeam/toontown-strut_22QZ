@@ -25,4 +25,4 @@ https://drive.google.com/file/d/1i-7C_uAfzZSaArzFh80NMD3Dg5FD2Tdt/view?usp=shari
 
 ## GNU/Linux
 
-Use the "Bottles" flatpak, similar process to macOS.
+Use the "Bottles" flatpak using a gaming bottle, similar process to macOS.
