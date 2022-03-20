@@ -20,6 +20,9 @@ Run in wine cmd once in directory:
 start Start
 ```
 
+Note: if it asks for an installer during bottle creation, just use this:
+https://drive.google.com/file/d/1i-7C_uAfzZSaArzFh80NMD3Dg5FD2Tdt/view?usp=sharing
+
 ## GNU/Linux
 
 Use the "Bottles" flatpak, similar process to macOS.
