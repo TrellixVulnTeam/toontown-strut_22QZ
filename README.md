@@ -26,4 +26,11 @@ brew install --no-quarantine gcenx/wine/unofficial-wineskin
 
 ## GNU/Linux
 
-Use the "Bottles" flatpak using a gaming bottle, similar process to macOS except from wine cmd.
+* Install "Bottles"
+* Create a gaming bottle
+* Copy strut folder to C drive
+* Open WINE CMD
+* CD into folder and run:
+```
+start Start
+```
