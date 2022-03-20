@@ -11,7 +11,7 @@ A variant of Toontown Stride and a Community Focused Toontown Server with hacky 
 ## Windows
 Pre-installed.
 
-## macOS ***WIP***
+## macOS ***WIP/BROKEN***
 ```
 brew install --no-quarantine gcenx/wine/unofficial-wineskin
 ```
