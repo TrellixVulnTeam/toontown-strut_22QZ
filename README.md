@@ -16,7 +16,7 @@ Pre-installed.
 
 Installing the provided Panda3D wheel requires Python 3.9, which is not installed on your system by default whatsoever.  We recommend installing Python 3.9 through [Homebrew](https://brew.sh/) (Make sure that the xcode command line tools are installed first `xcode-select --install`): 
 ```shell
-$ brew install python@3.9
+$ brew install python@3.9 cmake
 ```
 (This will symlink Python 3.9 to `python3.9` and pip to `pip3`).
 
@@ -28,3 +28,7 @@ $ pip install wxPython
 
 Then just make:
 https://github.com/loblao/libpandadna
+by doing:
+```shell
+cmake . && cmake --build .
+```
