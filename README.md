@@ -20,7 +20,7 @@ Run in wine cmd once in directory:
 start Start
 ```
 
-Note: if it asks for an installer during bottle creation, just use this (but be sure to uncheck anything related to Python and Sample Programs, and make a shortcut to CMD!):
+Note: if it asks for an installer during bottle creation, just use this (but be sure to uncheck anything related to Python and Sample Programs, and make a shortcut to drive_c/Windows/System32/cmd.exe!):
 https://drive.google.com/file/d/1i-7C_uAfzZSaArzFh80NMD3Dg5FD2Tdt/view?usp=sharing
 
 ## GNU/Linux
