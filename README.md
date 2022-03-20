@@ -19,8 +19,10 @@ brew install --no-quarantine gcenx/wine/unofficial-wineskin
 * Install latest wrapper
 * Create a new wrapper.
 * Copy strut to the wrapper's c drive using "show package contents"
-* Open the wrapper
+* Open the app instide wrapper
 * Create a shortcut to the Start batch file
+* Done!
+
 
 ## GNU/Linux
 
