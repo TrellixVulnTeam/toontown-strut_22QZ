@@ -21,7 +21,7 @@ model-path /
 # Server:
 server-version Live-1.0.1
 min-access-level 700
-# accountdb-type developer
+accountdb-type developer
 shard-low-pop 50
 shard-mid-pop 100
 
@@ -36,15 +36,15 @@ dc-file dependencies/astron/dclass/toonisland.dc
 want-pets #t
 want-parties #f
 want-cogdominiums #t
-want-lawbot-cogdo #t
+want-lawbot-cogdo #f
 want-anim-props #t
 want-game-tables #f
-want-find-four #f
-want-chinese-checkers #f
-want-checkers #f
+want-find-four #t
+want-chinese-checkers #t
+want-checkers #t
 want-house-types #t
 want-gifting #t
-want-top-toons #t
+want-top-toons #f
 
 # Chat:
 want-whitelist #f
@@ -52,13 +52,13 @@ want-sequence-list #f
 
 # Developer options:
 show-population #t
-want-instant-parties #f
+want-instant-parties #t
 want-instant-delivery #t
 cogdo-pop-factor 1.5
 cogdo-ratio 0.5
 default-directnotify-level info
 
 # Crates:
-dont-destroy-crate #f
-get-key-reward-always #f
-get-crate-reward-always #f
+dont-destroy-crate #t
+get-key-reward-always #t
+get-crate-reward-always #t
