@@ -1,6 +1,6 @@
 @echo off
 cd ..
-title Toontown UberDOG
+title Toontown Stride UberDOG
 mode con: cols=60 lines=20
 
 rem Define some constants for our UberDOG server:

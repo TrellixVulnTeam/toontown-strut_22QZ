@@ -23,10 +23,5 @@ class FactoryManagerAI(DirectObject.DirectObject):
             factory = DistributedFatalFactoryAI.DistributedFatalFactoryAI(self.air, factoryId, factoryZone, entranceId, players)
         else:
             factory = DistributedFactoryAI.DistributedFactoryAI(self.air, factoryId, factoryZone, entranceId, players)
-        try:
-            factory.generateWithRequired(factoryZone)
-        except:
-            print("Returning to sellbot front entrance due to bug...")
-            factoryZone = 22000
-            factory.generateWithRequired(factoryZone)
+        factory.generateWithRequired(factoryZone)
         return factoryZone

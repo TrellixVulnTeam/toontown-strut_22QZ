@@ -1,6 +1,7 @@
 @echo off
 cd ..
-title Toontown AI
+title Toontown Stride AI
+mode con: cols=60 lines=20
 
 
 rem Define some constants for our AI server:
@@ -10,7 +11,7 @@ set ASTRON_IP=127.0.0.1:7100
 set EVENTLOGGER_IP=127.0.0.1:7198
 
 rem Get the user input:
-set DISTRICT_NAME=Nutty River
+set DISTRICT_NAME=Nuttyriver
 set BASE_CHANNEL=401000000
 
 :main

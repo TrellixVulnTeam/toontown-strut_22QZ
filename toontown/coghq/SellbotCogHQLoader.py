@@ -29,7 +29,7 @@ class SellbotCogHQLoader(CogHQLoader.CogHQLoader):
         for stateName in ['quietZone']:
             state = self.fsm.getStateNamed(stateName)
             state.addTransition('factoryInterior')
-            #state.addTransition('fatalInterior')
+            state.addTransition('fatalInterior')
 
         self.musicFile = 'phase_9/audio/bgm/encntr_suit_HQ_nbrhood.ogg'
         self.cogHQExteriorModelPath = 'phase_9/models/cogHQ/SellbotHQExterior'
@@ -170,22 +170,22 @@ class SellbotCogHQLoader(CogHQLoader.CogHQLoader):
                                                  -0.34), scale=0.1, mayChange=False, parent=sdSign)
             sdText.setDepthWrite(0)
             sdText.flattenStrong()
-            #fatalDoor = self.geom.find('**/sign_origin')
-            #fatalSign = cogSign.copyTo(fatalDoor)
-            #fatalSign.setPosHprScale(0, 1.25, 4, 180, 0, 0, elevatorSignSF, elevatorSignSF, elevatorSignSF * aspectSF)
-            #fatalSign.node().setEffect(DecalEffect.make())
-            #fatalTypeText = TTLocalizer.Factory
-            #fatalTypeText = DirectGui.OnscreenText(text=fatalTypeText, font=ToontownGlobals.getSuitFont(), pos=(0,
-                                                                                                                #-0.25),
-                                                   #scale=0.075, mayChange=False, parent=fatalSign)
-            #fatalTypeText.setDepthWrite(0)
-            #fatalTypeText.flattenStrong()
-            #fatalText = TTLocalizer.SellbotFatalEntrance
-            #fatalText = DirectGui.OnscreenText(text=fatalText, font=ToontownGlobals.getSuitFont(), pos=(0,
-                                                                                                        #-0.34),
-                                               #scale=0.1, mayChange=False, parent=fatalSign)
-            #fatalText.setDepthWrite(0)
-            #fatalText.flattenStrong()
+            fatalDoor = self.geom.find('**/sign_origin')
+            fatalSign = cogSign.copyTo(fatalDoor)
+            fatalSign.setPosHprScale(0, 1.25, 4, 180, 0, 0, elevatorSignSF, elevatorSignSF, elevatorSignSF * aspectSF)
+            fatalSign.node().setEffect(DecalEffect.make())
+            fatalTypeText = TTLocalizer.Factory
+            fatalTypeText = DirectGui.OnscreenText(text=fatalTypeText, font=ToontownGlobals.getSuitFont(), pos=(0,
+                                                                                                                -0.25),
+                                                   scale=0.075, mayChange=False, parent=fatalSign)
+            fatalTypeText.setDepthWrite(0)
+            fatalTypeText.flattenStrong()
+            fatalText = TTLocalizer.SellbotFatalEntrance
+            fatalText = DirectGui.OnscreenText(text=fatalText, font=ToontownGlobals.getSuitFont(), pos=(0,
+                                                                                                        -0.34),
+                                               scale=0.1, mayChange=False, parent=fatalSign)
+            fatalText.setDepthWrite(0)
+            fatalText.flattenStrong()
 
             cogSign.removeNode()
             self.geom.flattenMedium()
@@ -223,14 +223,12 @@ class SellbotCogHQLoader(CogHQLoader.CogHQLoader):
         self.placeClass = None
 
     def enterFatalInterior(self, requestStatus):
-        #self.placeClass = FatalInterior.FatalInterior
-        #self.enterPlace(requestStatus)
-        print("nope")
+        self.placeClass = FatalInterior.FatalInterior
+        self.enterPlace(requestStatus)
 
     def exitFatalInterior(self):
-        #self.exitPlace()
-        #self.placeClass = None
-        print("nuh uh")
+        self.exitPlace()
+        self.placeClass = None
 
     def enterFactoryInterior(self, requestStatus):
         self.placeClass = FactoryInterior.FactoryInterior

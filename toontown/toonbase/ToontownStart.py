@@ -38,7 +38,7 @@ if __debug__:
     from direct.stdpy import threading
 
     loadPrcFile('dependencies/config/general.prc')
-    loadPrcFile('dependencies/config/release/live.prc')
+    loadPrcFile('dependencies/config/release/dev.prc')
 
     if os.path.isfile('dependencies/config/local.prc'):
         loadPrcFile('dependencies/config/local.prc')

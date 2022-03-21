@@ -5,7 +5,7 @@ import time
 from Crypto.Cipher import AES
 
 
-UNKNOWN = 100
+UNKNOWN = 700
 USER = 100
 COMMUNITY_MANAGER = 200
 MODERATOR = 300
