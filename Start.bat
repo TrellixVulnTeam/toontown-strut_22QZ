@@ -74,9 +74,9 @@ set /P TTS_GAMESERVER="Server IP: "
 :game
 cls
 echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-echo Username [!] This does get stored in your source code so beware!
+echo Passkey [!] KEEP SECRET
 echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-set /P TIA_PLAYCOOKIE="Username: "
+set /P TIA_PLAYCOOKIE="Passkey: "
 echo.
 cls
 echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

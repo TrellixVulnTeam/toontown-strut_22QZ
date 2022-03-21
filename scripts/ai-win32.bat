@@ -1,7 +1,6 @@
 @echo off
 cd ..
-title Toontown Stride AI
-mode con: cols=60 lines=20
+title Toontown Strut AI
 
 
 rem Define some constants for our AI server:
@@ -24,5 +23,4 @@ set BASE_CHANNEL=401000000
 	--astron-ip %ASTRON_IP% ^
 	--eventlogger-ip %EVENTLOGGER_IP% ^
 	--district-name "%DISTRICT_NAME%"
-PAUSE
 goto main

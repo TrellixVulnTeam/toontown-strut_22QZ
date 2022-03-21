@@ -1,7 +1,6 @@
 @echo off
 cd ..
-title Toontown Stride UberDOG
-mode con: cols=60 lines=20
+title Toontown Strut UberDOG
 
 rem Define some constants for our UberDOG server:
 set MAX_CHANNELS=999999
@@ -21,5 +20,4 @@ set BASE_CHANNEL=1000000
 	--stateserver %STATESERVER% ^
 	--astron-ip %ASTRON_IP% ^
 	--eventlogger-ip %EVENTLOGGER_IP%
-PAUSE
 goto main
