@@ -19,8 +19,8 @@ vfs-mount resources/server /server
 model-path /
 
 # Server:
-server-version Live-1.0.1
-min-access-level 700
+server-version Final-1.0.3
+min-access-level 100
 accountdb-type developer
 shard-low-pop 50
 shard-mid-pop 100

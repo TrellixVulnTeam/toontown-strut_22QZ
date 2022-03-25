@@ -184,7 +184,7 @@ class DeveloperAccountDB(AccountDB):
 
     def lookup(self, userId, callback):
         return AccountDB.lookup(self, {'userId': userId,
-                                       'accessLevel': 700,
+                                       'accessLevel': 100, # user access level here, be sure to set in the prc file/config file!
                                        'notAfter': 0},
                                 callback)
 

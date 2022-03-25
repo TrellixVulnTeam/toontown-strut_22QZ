@@ -33,7 +33,7 @@ uberdogs:
 roles:
     - type: clientagent
       bind: 0.0.0.0:7199
-      version: "Live-1.0.1"
+      version: "Final-1.0.3"
       client:
        relocate: true
        add_interest: enabled
