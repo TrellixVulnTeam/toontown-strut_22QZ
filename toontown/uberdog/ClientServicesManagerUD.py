@@ -12,6 +12,7 @@ from toontown.toonbase import TTLocalizer
 from toontown.uberdog import NameJudgeBlacklist
 
 from panda3d.core import *
+import base64
 
 import hashlib, hmac, json
 import dbm, math, os
@@ -183,10 +184,22 @@ class DeveloperAccountDB(AccountDB):
     notify = directNotify.newCategory('DeveloperAccountDB')
 
     def lookup(self, userId, callback):
-        return AccountDB.lookup(self, {'userId': userId,
-                                       'accessLevel': 100, # user access level here, be sure to set in the prc file/config file!
-                                       'notAfter': 0},
-                                callback)
+        admins = ["YidNMG4zcjBGVFchJw==","Yic2MTIwJw=="] # change me to encoded account Ids in the astron db who you want to have system admin.
+        encodedBUid = base64.b64encode(str(userId).encode("utf-8"))
+        trueUid = str(encodedBUid, "utf-8")
+        self.notify.warning("DEBUG: USER tried to login with encoded user id: " + trueUid)
+        if trueUid not in admins:
+            self.notify.warning("DEBUG: User " + trueUid + " is not admin!")
+            return AccountDB.lookup(self, {'userId': userId,
+                                           'accessLevel': 100, # user access level here, be sure to set minimum in the prc file/config file!
+                                           'notAfter': 0},
+                                    callback)
+        else:
+            self.notify.warning("DEBUG: User " + trueUid + " is an admin!")
+            return AccountDB.lookup(self, {'userId': userId,
+                                           'accessLevel': 700, # user access level here, be sure to set minimum in the prc file/config file!
+                                           'notAfter': 0},
+                                    callback)
 
 class RemoteAccountDB:
     # TO DO FOR NAMES:
