@@ -34,3 +34,7 @@ brew install --no-quarantine gcenx/wine/unofficial-wineskin
 ```
 start Start
 ```
+
+# credits
+
+* https://github.com/OSToontown/ToontownStride-Py3 - original project
