@@ -11,7 +11,7 @@ A variant of Toontown Stride and a Community Focused Toontown Server with hacky 
 ## Windows
 Pre-installed.
 
-## macOS (if you wish to experiment with the code and/or run a server)
+## macOS (our method, if you wish to experiment with the code and/or run a server)
 ```
 brew install --no-quarantine gcenx/wine/unofficial-wineskin
 ```
@@ -38,7 +38,7 @@ After installing Python 3.9.  You can then install the wheel by using pip:
 $ pip install panda3d-1.11.0-cp39-cp39-macosx_10_9_x86_64.whl
 ```
 
-## GNU/Linux
+## GNU/Linux (WINE Only)
 
 * Install "Bottles"
 * Create a gaming bottle
