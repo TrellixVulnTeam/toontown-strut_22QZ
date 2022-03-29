@@ -11,7 +11,7 @@ A variant of Toontown Stride and a Community Focused Toontown Server with hacky 
 ## Windows
 Pre-installed.
 
-## macOS (\if you wish to experiment with the code and/or run a server)
+## macOS (if you wish to experiment with the code and/or run a server)
 ```
 brew install --no-quarantine gcenx/wine/unofficial-wineskin
 ```
@@ -24,7 +24,7 @@ brew install --no-quarantine gcenx/wine/unofficial-wineskin
 * Done!
 
 
-## macOS (\open-toontown method, if you just want to play)
+## macOS (open-toontown method, if you just want to play)
 [Panda3D Wheel for macOS 10.9+ (Python3.9, x86_64)](https://drive.google.com/file/d/1_6WJxrkNfwisK5pe5ubJJy1psEp0IIft/view?usp=sharing)
 
 Installing the provided Panda3D wheel requires Python 3.9, which is not installed on your system by default whatsoever.  We recommend installing Python 3.9 through [Homebrew](https://brew.sh/) (Make sure that the xcode command line tools are installed first `xcode-select --install`): 
