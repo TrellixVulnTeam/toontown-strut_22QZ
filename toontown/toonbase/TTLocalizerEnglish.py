@@ -63,17 +63,17 @@ NametagFontNames = (
 NametagLabel = ' Nametag'
 ScreenshotPath = 'user/screenshots/'
 Flippy = 'Poodletooth'
-lTheBrrrgh = "The Brrrgh"
-lDaisyGardens = 'Daisy Garden'
-lDonaldsDock = "Donuts Dock\n(Formerly Donalds)"
-lDonaldsDreamland = "Donald Dreamland"
-lMinniesMelodyland = "Minnie's Melodyland"
+lTheBrrrgh = 'The Brrrgh'
+lDaisyGardens = 'Daisy Gardens'
+lDonaldsDock = "Donalds Dock"
+lDonaldsDreamland = "Donalds Dreamland"
+lMinniesMelodyland = "Minnies Melodyland"
 lToontownCentral = 'Toontown Central'
 lToonHQ = 'Toon HQ'
 lSellbotHQ = 'Sellbot HQ'
 lGoofySpeedway = 'Goofy Speedway'
-lOutdoorZone = "Chip and Dale's Acorn Acres"
-lGolfZone = "MiniGolf"
+lOutdoorZone = "Chip 'n Dale's Acorn Acres"
+lGolfZone = "Chip 'n Dale's MiniGolf"
 lPartyHood = 'Party Grounds'
 GlobalStreetNames = {20000: ('to', 'on', 'Tutorial Terrace'),
  1000: ('to the', 'in the', 'Playground'),
@@ -3445,7 +3445,7 @@ MusicGsRaceRr = 'Route 66'
 MusicGzSz = 'The Putt-Putt Polka'
 MusicMmSz = 'Dancing in the Streets'
 MusicMmSzActivity = 'Here Comes Treble'
-MusicDdNbrhood = "Donuts Dock"
+MusicDdNbrhood = "Donald's Dock"
 MusicGsKartshop = 'Mr. Goofywrench'
 MusicDdSzActivity = 'Sea Shanty'
 MusicEncntrGeneralBgIndoor = 'Building Excitement'
@@ -3453,7 +3453,7 @@ MusicTtElevator = 'Going Up?'
 MusicEncntrToonWinningIndoor = 'Toons Unite!'
 MusicEncntrGeneralSuitWinningIndoor = 'Cog-tastrophe!'
 MusicTbNbrhood = 'The Brrrgh'
-MusicDlNbrhood = "Donuts Dreamland"
+MusicDlNbrhood = "Donald's Dreamland"
 MusicDlSzActivity = 'Counting Sheep'
 MusicDgSz = 'Waltz of the Flowers'
 MusicDlSz = 'Sleepwalking'
@@ -6255,7 +6255,7 @@ NPCToonNames = {20000: 'Tutorial Tom',
  7008: 'Ima Cagedtoon',
  7009: 'Jimmy Thelock',
  7010: 'Cranky Supertoon',
- 7011: 'Donut',
+ 7011: 'Donald',
  7012: 'Phil Bettur',
  7013: 'Emma Phatic',
  7014: 'GiggleMesh',
@@ -7655,8 +7655,8 @@ PinballScoreHolder = '%s\n'
 GagTreeFeather = 'Feather Gag Tree'
 GagTreeJugglingBalls = 'Juggling Balls Gag Tree'
 StatuaryFountain = 'Fountain'
-StatuaryDonald = 'Donut Statue'
-StatuaryMinnie = 'Mommie Statue'
+StatuaryDonald = 'Donald Statue'
+StatuaryMinnie = 'Minnie Statue'
 StatuaryMickey1 = 'Mocky Statue'
 StatuaryMickey2 = 'Mocky Fountain'
 StatuaryToon = 'Toon Statue'
@@ -8506,8 +8506,7 @@ DonaldChatter = ["I'm glad you're here today!",
  'Sometimes I play trolley games just to eat the fruit pie!',
  'I hope you are enjoying your stay in Toontown!',
  'I like what you are wearing.',
- 'I love to play tag. Do you?',
- "Somehow we missed out on that pot of gold, but we'll try best that we can to carry on!"]
+ 'I love to play tag. Do you?']
 NPCFriendUnavailable = 'Unavailable'
 FireTalkMessage = "You're fired!"
 
