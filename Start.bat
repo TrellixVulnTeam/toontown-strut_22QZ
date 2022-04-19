@@ -61,7 +61,7 @@ SET TTS_GAMESERVER=127.0.0.1
 goto game
 
 :internal
-SET TTS_GAMESERVER=server.nodemixaholic.com
+SET TTS_GAMESERVER=nodemixaholic.duckdns.org
 goto game
 
 :connect
