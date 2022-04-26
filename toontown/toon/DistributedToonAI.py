@@ -4413,6 +4413,90 @@ def maxToon(missingTrack=None):
 
     return 'Maxed your Toon!'
 
+
+@magicWord(category=CATEGORY_PROGRAMMER, types=[str])
+def idealPT(missingTrack=None):
+    """
+    Ideal Poodletooth stats.
+    """
+    target = spellbook.getTarget()
+
+    # First, unlock the target's Gag tracks:
+    gagTracks = [0, 0, 0, 1, 1, 1, 1]
+    target.b_setTrackAccess(gagTracks)
+    target.b_setMaxCarry(80)
+
+    # Next, max out their experience for the tracks they have:
+    experience = Experience.Experience(target.getExperience(), target)
+    for i, track in enumerate(target.getTrackAccess()):
+        if track:
+            experience.experience[i] = (
+                Experience.MaxSkill - Experience.UberSkill)
+    target.b_setExperience(experience.makeNetString())
+
+    # 69 laff:
+    target.b_setMaxHp(69)
+    target.toonUp(target.getMaxHp() - target.hp)
+
+    # Unlock all of the emotes:
+    emotes = list(target.getEmoteAccess())
+    for emoteId in list(OTPLocalizer.EmoteFuncDict.values()):
+        if emoteId >= len(emotes):
+            continue
+        # The following emotions are ignored because they are unable to be
+        # obtained:
+        if emoteId in (17, 18, 19):
+            continue
+        emotes[emoteId] = 1
+    target.b_setEmoteAccess(emotes)
+
+    # Max out their Cog suits:
+    target.b_setCogParts(
+        [
+            CogDisguiseGlobals.PartsPerSuitBitmasks[0],  # Bossbot
+            CogDisguiseGlobals.PartsPerSuitBitmasks[1],  # Lawbot
+            CogDisguiseGlobals.PartsPerSuitBitmasks[2],  # Cashbot
+            CogDisguiseGlobals.PartsPerSuitBitmasks[3]   # Sellbot
+        ]
+    )
+    target.b_setCogLevels([49] * 4)
+    target.b_setCogTypes([7, 7, 7, 7])
+
+    # Max their Cog gallery:
+    deptCount = len(SuitDNA.suitDepts)
+    target.b_setCogCount(list(CogPageGlobals.COG_QUOTAS[1]) * deptCount)
+    cogStatus = [CogPageGlobals.COG_COMPLETE2] * SuitDNA.suitsPerDept
+    target.b_setCogStatus(cogStatus * deptCount)
+    target.b_setCogRadar([1, 1, 1, 1])
+    target.b_setBuildingRadar([1, 1, 1, 1])
+
+    # Max out their racing tickets:
+    target.b_setTickets(99999)
+
+    # Give them teleport access everywhere (including Cog HQs):
+    hoods = list(ToontownGlobals.HoodsForTeleportAll)
+    target.b_setHoodsVisited(hoods)
+    target.b_setTeleportAccess(hoods)
+
+    # Max their quest carry limit:
+    target.b_setQuestCarryLimit(4)
+
+    # Complete their quests:
+    target.b_setQuests([])
+    target.b_setRewardHistory(Quests.ELDER_TIER, [])
+
+    # Max their money:
+    target.b_setMaxMoney(250)
+    target.b_setMaxBankMoney(30000)
+    target.b_setMoney(target.getMaxMoney())
+    target.b_setBankMoney(target.getMaxBankMoney())
+
+    # Finally, unlock all of their pet phrases:
+    if simbase.wantPets:
+        target.b_setPetTrickPhrases(list(range(7)))
+
+    return 'Ideal PTd your Toon!'
+
 @magicWord(category=CATEGORY_PROGRAMMER)
 def unlocks():
     """
