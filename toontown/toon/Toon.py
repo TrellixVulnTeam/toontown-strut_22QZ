@@ -1175,7 +1175,7 @@ class Toon(Avatar.Avatar, ToonHead):
 
     def getDialogueArray(self):
         if base.cr.newsManager.isHolidayRunning(ToontownGlobals.APRIL_TOONS_WEEK):
-            animalType = random.choice(list(TTLocalizer.AnimalToSpecies.keys()))
+            animalType = 'mouse'
         else:
             animalType = self.style.getType()
         if animalType == 'dog':
