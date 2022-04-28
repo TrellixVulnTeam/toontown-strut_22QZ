@@ -53,4 +53,5 @@ start Start
 # credits
 
 * https://github.com/OSToontown/ToontownStride-Py3 - original project
+* https://github.com/satire6/Spotify - Pandora Textures
 * people like you. thank you!
