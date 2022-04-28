@@ -42,6 +42,7 @@ $ pip install panda3d-1.11.0-cp39-cp39-macosx_10_9_x86_64.whl
 
 * Install "Bottles"
 * Create a gaming bottle
+* Install .NET 3.5 and 4.x
 * Copy strut folder to C drive
 * Open WINE CMD
 * CD into folder and run:
