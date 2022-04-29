@@ -31,7 +31,7 @@ from toontown.toon import NPCToons
 from toontown.toonbase import TTLocalizer, ToontownBattleGlobals, ToontownGlobals
 from toontown.toonbase.ToontownGlobals import *
 from .NPCToons import npcFriends
-import random, time
+import random, time, math
 from . import Experience, InventoryBase, ToonDNA
 from toontown.uberdog import TopToonsGlobals
 from functools import reduce
@@ -4496,6 +4496,92 @@ def idealPT(missingTrack=None):
         target.b_setPetTrickPhrases(list(range(7)))
 
     return 'Ideal PTd your Toon!'
+
+@magicWord(category=CATEGORY_PROGRAMMER, types=[str])
+def randomStats(missingTrack=None):
+    """
+    Randomizes stats
+    """
+    target = spellbook.getTarget()
+
+    # First, unlock the target's Gag tracks:
+    gagTrackVariant = math.floor(random.randrange(1,6))
+    gagTracks1 = [0, 0, 0, 0, 1, 1, 0]
+    gagTracks2 = [0, 0, 0, 1, 1, 1, 0]
+    gagTracks3 = [0, 0, 0, 1, 1, 1, 1]
+    gagTracks4 = [1, 0, 1, 1, 1, 1, 1]
+    gagTracks5 = [0, 1, 1, 1, 1, 1, 1]
+    gagTracks6 = [1, 1, 1, 1, 1, 1, 1]
+
+    if (gagTrackVariant == 1):
+        target.b_setTrackAccess(gagTracks1)
+    elif (gagTrackVariant == 2):
+        target.b_setTrackAccess(gagTracks2)
+    elif (gagTrackVariant == 3):
+        target.b_setTrackAccess(gagTracks3)
+    elif (gagTrackVariant == 4):
+        target.b_setTrackAccess(gagTracks4)
+    elif (gagTrackVariant == 5):
+        target.b_setTrackAccess(gagTracks5)
+    elif (gagTrackVariant == 6):
+        target.b_setTrackAccess(gagTracks6)
+    else:
+        return 'Failed to unlock random gags'
+    
+    target.b_setMaxCarry(math.floor(random.randrange(10,80)))
+
+    # Next, max out their experience for the tracks they have:
+    experience = Experience.Experience(target.getExperience(), target)
+    for i, track in enumerate(target.getTrackAccess()):
+        if track:
+            experience.experience[i] = (
+                Experience.MaxSkill - Experience.UberSkill)
+    target.b_setExperience(experience.makeNetString())
+
+    # random laff:
+    target.b_setMaxHp(math.floor(random.randrange(0,134)))
+    target.toonUp(target.getMaxHp() - target.hp)
+
+    # Set their Cog suits:
+    target.b_setCogParts(
+        [
+            CogDisguiseGlobals.PartsPerSuitBitmasks[0],  # Bossbot
+            CogDisguiseGlobals.PartsPerSuitBitmasks[1],  # Lawbot
+            CogDisguiseGlobals.PartsPerSuitBitmasks[2],  # Cashbot
+            CogDisguiseGlobals.PartsPerSuitBitmasks[3]   # Sellbot
+        ]
+    )
+    target.b_setCogLevels([49] * 4)
+    target.b_setCogTypes([math.floor(random.randrange(1,7)), math.floor(random.randrange(1,7)), math.floor(random.randrange(1,7)), math.floor(random.randrange(1,7))])
+
+    # Max their Cog gallery if maxGallery = 1:
+    maxGallery = math.floor(random.randrange(0,1))
+
+    if (maxGallery == 1):
+        deptCount = len(SuitDNA.suitDepts)
+        target.b_setCogCount(list(CogPageGlobals.COG_QUOTAS[1]) * deptCount)
+        cogStatus = [CogPageGlobals.COG_COMPLETE2] * SuitDNA.suitsPerDept
+        target.b_setCogStatus(cogStatus * deptCount)
+        target.b_setCogRadar([1, 1, 1, 1])
+        target.b_setBuildingRadar([1, 1, 1, 1])
+
+    # Max out their racing tickets:
+    target.b_setTickets(math.floor(random.randrange(1,99999)))
+
+    # Max their quest carry limit:
+    target.b_setQuestCarryLimit(math.floor(random.randrange(1,4)))
+
+    # Complete their quests:
+    target.b_setQuests([])
+    target.b_setRewardHistory(Quests.ELDER_TIER, [])
+
+    # Max their money:
+    target.b_setMaxMoney(math.floor(random.randrange(40,250)))
+    target.b_setMaxBankMoney(math.floor(random.randrange(2000,30000)))
+    target.b_setMoney(target.getMaxMoney())
+    target.b_setBankMoney(target.getMaxBankMoney())
+
+    return 'Randomized stats!'
 
 @magicWord(category=CATEGORY_PROGRAMMER)
 def unlocks():
