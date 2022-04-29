@@ -54,5 +54,6 @@ start Start
 
 * https://github.com/OSToontown/ToontownStride-Py3 - original project
 * https://github.com/satire6/Spotify - Pandora Textures
+* Waifu2x - The project that allows upscaling without as much quality loss.
 * Disney - Creating "Toontown Online", the one that started it all...
 * people like you. thank you!
