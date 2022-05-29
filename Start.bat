@@ -61,7 +61,7 @@ SET TTS_GAMESERVER=127.0.0.1
 goto game
 
 :internal
-SET TTS_GAMESERVER=127.0.0.1
+SET TTS_GAMESERVER=recently-fc.at.playit.gg:34655
 goto game
 
 :connect
