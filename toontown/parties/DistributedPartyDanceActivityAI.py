@@ -1,5 +1,5 @@
 from direct.directnotify import DirectNotifyGlobal
-from toontown.parties.DistributedPartyDanceActivityBaseAI import DistributedPartyDanceActivityBaseAI
+from direct.distributed.DistributedObjectAI import DistributedObjectAI
 
-class DistributedPartyDanceActivityAI(DistributedPartyDanceActivityBaseAI):
-    notify = DirectNotifyGlobal.directNotify.newCategory("DistributedPartyDanceActivityAI")
+class DistributedPartyDanceActivityAI(DistributedObjectAI):
+    notify = DirectNotifyGlobal.directNotify.newCategory('DistributedPartyDanceActivityAI')
