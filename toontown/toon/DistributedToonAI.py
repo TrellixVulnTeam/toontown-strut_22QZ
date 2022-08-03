@@ -4583,7 +4583,7 @@ def crateKeys(count):
     target.b_setCrateKeys(count)
     return 'You were given %d crate keys.' % count
 
-    @magicWord(category=CATEGORY_ADMINISTRATOR, types=[str])
+@magicWord(category=CATEGORY_ADMINISTRATOR, types=[str])
 def name(name=''):
     """
     Modify the target's name.
