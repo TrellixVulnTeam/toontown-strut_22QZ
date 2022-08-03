@@ -34,9 +34,9 @@ dc-file dependencies/astron/dclass/toonisland.dc
 
 # Core features:
 want-pets #t
-want-parties #f
+want-parties #t
 want-cogdominiums #t
-want-lawbot-cogdo #f
+want-lawbot-cogdo #t
 want-anim-props #t
 want-game-tables #f
 want-find-four #t
