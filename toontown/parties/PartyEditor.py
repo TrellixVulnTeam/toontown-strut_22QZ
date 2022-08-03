@@ -13,7 +13,7 @@ from toontown.parties import PartyUtils
 from toontown.parties.PartyEditorGrid import PartyEditorGrid
 from toontown.parties.PartyEditorListElement import PartyEditorListElement
 
-class PartyEditor(FSM, DirectObject):
+class PartyEditor(FSM):
     notify = directNotify.newCategory('PartyEditor')
 
     def __init__(self, partyPlanner, parent):
@@ -45,10 +45,9 @@ class PartyEditor(FSM, DirectObject):
          self.partyPlanner.gui.find('**/activitiesButtonDown_down'),
          self.partyPlanner.gui.find('**/activitiesButtonDown_rollover'),
          self.partyPlanner.gui.find('**/activitiesButtonDown_inactive')), incButton_relief=None, incButton_pos=(-0.05, 0.0, -0.94), itemFrame_pos=(pos[0], pos[1], pos[2] + 0.04), itemFrame_relief=None, numItemsVisible=1, items=[])
-        holidayIds = base.cr.newsManager.getHolidayIdList()
-        isWinter = ToontownGlobals.WINTER_DECORATIONS in holidayIds or ToontownGlobals.WACKY_WINTER_DECORATIONS in holidayIds
-        isVictory = ToontownGlobals.VICTORY_PARTY_HOLIDAY in holidayIds
-        isValentine = ToontownGlobals.VALENTINES_DAY in holidayIds
+        isWinter = base.cr.newsManager.isHolidayRunning(ToontownGlobals.CHRISTMAS)
+        isVictory = base.cr.newsManager.isHolidayRunning(ToontownGlobals.VICTORY_PARTY_HOLIDAY)
+        isValentine = base.cr.newsManager.isHolidayRunning(ToontownGlobals.VALENTOONS_DAY)
         for activityId in PartyGlobals.PartyEditorActivityOrder:
             if not isVictory and activityId in PartyGlobals.VictoryPartyActivityIds or not isWinter and activityId in PartyGlobals.WinterPartyActivityIds or not isValentine and activityId in PartyGlobals.ValentinePartyActivityIds:
                 pass
@@ -64,6 +63,8 @@ class PartyEditor(FSM, DirectObject):
             if not isVictory and decorationId in PartyGlobals.VictoryPartyDecorationIds or not isWinter and decorationId in PartyGlobals.WinterPartyDecorationIds or not isValentine and decorationId in PartyGlobals.ValentinePartyDecorationIds:
                 pass
             elif isVictory and decorationId in PartyGlobals.VictoryPartyReplacementDecorationIds or isValentine and decorationId in PartyGlobals.ValentinePartyReplacementDecorationIds:
+                pass
+            elif decorationId in PartyGlobals.TTSUnreleasedDecor:
                 pass
             else:
                 pele = PartyEditorListElement(self, decorationId, isDecoration=True)
@@ -117,7 +118,7 @@ class PartyEditor(FSM, DirectObject):
 
         self.initPartyClock()
         if self.currentElement:
-            self.currentElement.checkSoldOutAndPaidStatusAndAffordability()
+            self.currentElement.checkSoldOutAndAffordability()
 
     def buyCurrentElement(self):
         if self.currentElement:
@@ -148,7 +149,7 @@ class PartyEditor(FSM, DirectObject):
             self.elementList.scrollTo(0)
             self.elementList['items'][0].elementSelectedFromList()
             self.currentElement = self.elementList['items'][self.elementList.getSelectedIndex()]
-            self.currentElement.checkSoldOutAndPaidStatusAndAffordability()
+            self.currentElement.checkSoldOutAndAffordability()
         self.partyPlanner.instructionLabel['text'] = TTLocalizer.PartyPlannerEditorInstructionsIdle
         self.updateCostsAndBank()
         self.handleMutuallyExclusiveActivities()
@@ -171,13 +172,13 @@ class PartyEditor(FSM, DirectObject):
 
     def getMutuallyExclusiveActivities(self):
         currentActivities = self.partyEditorGrid.getActivitiesOnGrid()
-        actSet = set([])
+        actSet = Set([])
         for act in currentActivities:
             actSet.add(act[0])
 
         result = None
         for mutuallyExclusiveTuples in PartyGlobals.MutuallyExclusiveActivities:
-            mutSet = set(mutuallyExclusiveTuples)
+            mutSet = Set(mutuallyExclusiveTuples)
             inter = mutSet.intersection(actSet)
             if len(inter) > 1:
                 result = inter
